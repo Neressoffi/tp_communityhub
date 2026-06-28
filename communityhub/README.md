@@ -1,18 +1,38 @@
-# React + Vite
+CommunityHub - TP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce que j'ai fais ce projet :
 
-Currently, two official plugins are available:
+BASE
+- api.js : appels API (X-Project-Key, X-Auth-Token)
+- main.jsx : Bootstrap + Redux
+-  store.js : état  global (auth, events, contact, messages, skills, payments)
+- Router.jsx + ProtectedRoute + AdminRoute : navigation  et sécurité
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+AUTH
+- Inscription et connexion  (RegisterPage, LoginPage + authSlice)
+-  Déconnexion via API
 
-## React Compiler
+ÉVÉNEMENTS
+- Liste, détail et création (premium) via eventsSlice + pages Events
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+PREMIUM
+- Abonnement et historique des paiments (PremiumPage)
 
-Note: This will impact Vite dev & build performances.
+COMPÉTENCES
+-  Liste et ajout de compétence premium (SkillsPage, MySkillPage)
 
-## Expanding the ESLint configuration
+CONTACTS & MESSAGES
+- Gestion des contact et envoi de messages privés
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ADMIN
+- Création de catégories d'événements (CategoryForm)
+
+ROUTES
+/ /login /register /events /events/:id /events/create /dashboard
+/contacts /messages /skills /skills/my /premium /admin/categories
+
+RESTE À FAIRE (jour 2)
+- Filtres événements
+- Inscription événement + Stripe
+- Messages forum sur le détail
+- Dashboard avancé
